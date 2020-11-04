@@ -1,7 +1,9 @@
 import express from "express";
 
-const startServer = () => {
+const startServer = async () => {
   const app = express();
+
+  await require("./loaders").default({ expressApp: app });
 
   app
     .listen(8000, () => {
