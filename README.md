@@ -1,5 +1,5 @@
 # restfulAPI-setup
 
-interface back-end restful API 
+interface back-end restful API
 
 ts + node + express + koa..

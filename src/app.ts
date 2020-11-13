@@ -1,26 +1,17 @@
 import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
-import { newErrorMiddleware } from "@/middlewares/erros";
 
-interface props {
-  router: any;
-}
-export function newApp({ router }) {
+const startServer = async () => {
   const app = express();
 
-  app.use(
-    cors({
-      credentials: true,
+  await require("./loaders").default({ expressApp: app });
+
+  app
+    .listen(8000, () => {
+      console.log("server start on port : 8000");
     })
-  );
-  app.use(bodyParser.json());
-  app.use(
-    bodyParser.urlencoded({
-      extended: true,
-    })
-  );
-  // app.use(newErrorMiddleware());
-  app.use(router);
-  return app;
-}
+    .on("error", (error) => {
+      console.log("에러 발생");
+    });
+};
+
+startServer();
