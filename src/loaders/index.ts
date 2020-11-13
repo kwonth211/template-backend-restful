@@ -9,17 +9,8 @@ import mongooseLoader from "./mongooseLoader";
 // import './events';
 
 export default async ({ expressApp }) => {
-  const mongoConnection = await mongooseLoader();
-  //   Logger.info("✌️ DB loaded and connected!");
-
-  //   const userModel = {
-  //     name: 'userModel',
-  //     // Notice the require syntax and the '.default'
-  //     model: require('../models/user').default,
-  //   };
-
   //   // It returns the agenda instance because it's needed in the subsequent loaders
-  await dependencyInjectorLoader({ mongoConnection });
+  await dependencyInjectorLoader();
   //     mongoConnection,
   //     models: [
   //       userModel,
