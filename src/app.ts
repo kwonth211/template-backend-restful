@@ -1,4 +1,5 @@
 import express from "express";
+import "./env";
 
 const startServer = async () => {
   const app = express();
