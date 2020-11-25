@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "kwonth211",
   "main": "index.js",
-  "repository": "git@github.com:kwonth211/interface-backend-restful.git",
+  "repository": "git@github.com:kwonth211/template-backend-restful.git",
   "author": "kwonth211 <kwonth211@naver.com>",
   "license": "MIT",
   "dependencies": {
